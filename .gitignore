@@ -5,3 +5,6 @@ skills-lock.json
 # Ignore assignment guide images at root (not needed on GitHub Pages)
 /Rubric.png
 /bai-tap-du-an-ca-nhan-portfolio.png
+
+# Ignore generated submission PDF
+/TranQuocKhanh_25020220_Portfolio.pdf

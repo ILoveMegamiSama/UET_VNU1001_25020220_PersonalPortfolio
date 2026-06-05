@@ -1187,6 +1187,13 @@ footer {
    14. PRINT STYLES (PDF EXPORT OVERRIDES)
    ========================================================================== */
 @media print {
+    .reveal,
+    .js-enabled .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
     header,
     .header-nav,
     .mobile-nav,
