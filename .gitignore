@@ -1,0 +1,3 @@
+# Bỏ qua toàn bộ file PDF và hình ảnh trong dự án
+*.pdf
+*.png
