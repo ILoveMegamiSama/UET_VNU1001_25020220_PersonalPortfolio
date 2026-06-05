@@ -9,7 +9,8 @@ Dự án này là một trang web tĩnh (Vanilla HTML/CSS/JS) được thiết k
 ## 👤 Thông tin Sinh viên
 * **Họ và tên:** Trần Quốc Khánh
 * **Mã số sinh viên (MSSV):** 25020220
-* **Lớp:** K70 CLC Khoa học Máy tính
+* **Lớp:** K70I-IT2
+* **Ngành:** Công nghệ Thông tin
 * **Trường:** Đại học Công nghệ (VNU-UET)
 * **Học phần:** Nhập môn Công nghệ số (VNU1001)
 
@@ -52,34 +53,6 @@ Portfolio/
         ...
         └── Tuan6.pdf     # Bản PDF báo cáo tuần 6
 ```
-
----
-
-## ⚙️ Hướng dẫn Khởi chạy Cục bộ
-
-Vì dự án sử dụng các liên kết tương đối nội bộ và đồng bộ hóa tham số qua URL, cách tốt nhất để chạy thử là khởi tạo một máy chủ web tĩnh cục bộ (Local Static Server):
-
-### Cách 1: Sử dụng Python (Đơn giản nhất)
-Mở terminal tại thư mục dự án và chạy:
-```bash
-python3 -m http.server 8000
-```
-Sau đó truy cập địa chỉ: [http://localhost:8000](http://localhost:8000) trên trình duyệt.
-
-### Cách 2: Sử dụng Live Server (VS Code Extension)
-Nếu sử dụng VS Code, bạn chỉ cần click chuột phải vào file `index.html` và chọn **Open with Live Server**.
-
----
-
-## 🖨️ Cách Xuất PDF nộp bài cho Giảng viên
-
-1. Nhấp trực tiếp vào nút **"In trang"** trên thanh điều hướng đầu trang (hoặc bấm tổ hợp phím `Ctrl + P`).
-2. Chọn máy in là **Save as PDF** hoặc **Foxit Reader PDF Printer**.
-3. Đảm bảo cấu hình:
-   - Khổ giấy: **A4**
-   - Hướng giấy: **Dọc (Portrait)**
-   - Màu sắc: **Trắng đen / Đơn sắc** (Được tự động áp dụng qua stylesheet).
-4. Bạn có thể in rời 3 trang và ghép lại, hoặc sử dụng tệp PDF toàn văn đã được gộp sẵn bằng Chrome Headless tại gốc dự án: `TranQuocKhanh_25020220_Portfolio.pdf` (được ghi nhận trong `.gitignore`).
 
 ---
 
