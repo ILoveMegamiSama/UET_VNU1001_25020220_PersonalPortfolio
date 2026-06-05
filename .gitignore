@@ -1,3 +1,5 @@
 # Bỏ qua toàn bộ file PDF và hình ảnh trong dự án
 *.pdf
 *.png
+.agents/
+skills-lock.json
