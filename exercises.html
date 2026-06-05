@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kế quả thực hành 6 tuần học phần Nhập môn Công nghệ số - Trần Quốc Khánh (25020220).">
+    <title>Bài tập thực hành | Trần Quốc Khánh | Digital Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       FLOATING GLASS NAVIGATION BAR
+       ========================================================================== -->
+    <header>
+        <nav class="header-nav" id="main-nav">
+            <div class="logo-section">
+                <img src="assets/images/avatar.jpg" alt="Trần Quốc Khánh" class="logo-avatar">
+                <div>
+                    <div class="logo-text">Trần Quốc Khánh</div>
+                    <div class="logo-sub">MSSV: 25020220</div>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" id="nav-home">Giới thiệu</a>
+                <a href="exercises.html" class="nav-link active" id="nav-exercises">Bài tập</a>
+                <a href="summary.html" class="nav-link" id="nav-summary">Tổng kết</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="btn-icon" id="theme-toggle" title="Thay đổi giao diện" aria-label="Thay đổi giao diện">
+                    <i class="ph-light ph-sun-dim" id="theme-icon"></i>
+                </button>
+                <button class="btn-export" id="export-pdf-btn">
+                    <i class="ph-light ph-printer"></i> In trang
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+       MAIN CONTENT (Exercises with Sidebar Navigation)
+       ========================================================================== -->
+    <main class="container">
+        
+        <div class="exercises-layout">
+            
+            <!-- Sticky Sidebar table of contents (Left) -->
+            <aside class="exercises-sidebar">
+                <div class="sidebar-sticky">
+                    <span class="eyebrow" style="margin-bottom: 0.5rem; font-size: 0.6rem;">Danh mục bài tập</span>
+                    <a href="#week1" class="sidebar-link active" data-sec="week1"><i class="ph-light ph-folder"></i> Bài 1: Quản lý Tệp</a>
+                    <a href="#week2" class="sidebar-link" data-sec="week2"><i class="ph-light ph-magnifying-glass"></i> Bài 2: Tìm kiếm tài liệu</a>
+                    <a href="#week3" class="sidebar-link" data-sec="week3"><i class="ph-light ph-terminal"></i> Bài 3: Prompt Engineering</a>
+                    <a href="#week4" class="sidebar-link" data-sec="week4"><i class="ph-light ph-users-three"></i> Bài 4: Hợp tác Số</a>
+                    <a href="#week5" class="sidebar-link" data-sec="week5"><i class="ph-light ph-palette"></i> Bài 5: Sáng tạo nội dung</a>
+                    <a href="#week6" class="sidebar-link" data-sec="week6"><i class="ph-light ph-shield-check"></i> Bài 6: AI có trách nhiệm</a>
+                    <hr style="border: none; border-top: 1px solid var(--border-color); margin: 0.5rem 0;">
+                    <a href="#downloads" class="sidebar-link" data-sec="downloads"><i class="ph-light ph-download-simple"></i> Tải xuống PDF</a>
+                </div>
+            </aside>
+
+            <!-- Scrollable content sections (Right) -->
+            <div class="exercise-section-wrapper">
+                
+                <div class="section-header" style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
+                    <span class="eyebrow"><i class="ph-light ph-books"></i> Kết quả học tập</span>
+                    <h1 class="text-gradient-blue" style="font-size: 2.6rem; font-weight: 850; letter-spacing: -0.03em; margin-bottom: 0.5rem; display: block;">Báo Cáo Bài Tập Thực Hành</h1>
+                    <p class="section-summary" style="font-size: 1rem; color: var(--text-secondary); max-width: 60ch; line-height: 1.6;">
+                        Hệ thống hóa toàn bộ các sản phẩm thực hành và tự luận cá nhân trải dài qua 6 tuần học tập.
+                    </p>
+                </div>
+                
+                <!-- WEEK 1 -->
+                <section class="exercise-block reveal" id="week1">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-folder-open"></i> Bài 1 · Hệ thống hóa thư mục</span>
+                        <h2 class="section-title">Quản lý Dữ liệu và Thiết lập Thư mục Khoa học</h2>
+                        <p class="section-summary">
+                            Phát triển cấu trúc tổ chức tệp tối ưu để lưu trữ bài tập học phần, ngăn ngừa tình trạng lộn xộn dữ liệu và thất lạc phiên bản làm việc.
+                        </p>
+                    </div>
+                    
+                    <div class="bento-grid-2x2">
+                        <!-- Folder Tree card -->
+                        <div class="card-shell">
+                            <div class="card-inner">
+                                <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem;"><i class="ph-light ph-tree-structure" style="color: var(--accent-orange);"></i> Cấu trúc Thư mục K70_CS (Đề xuất tối ưu)</h3>
+                                <div class="folder-tree">
+                                    <div class="tree-node root">
+                                        <i class="ph-light ph-folder"></i>
+                                        <span class="node-name">UET_K70_Year1_Term2</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 1.25rem;">
+                                        <i class="ph-light ph-folder"></i>
+                                        <span class="node-name">UET_VNU1001_DigitalTech</span>
+                                        <span class="node-desc">(Học phần Công nghệ số)</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 2.5rem;">
+                                        <i class="ph-light ph-folder"></i>
+                                        <span class="node-name">01_Lectures</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 2.5rem;">
+                                        <i class="ph-light ph-folder"></i>
+                                        <span class="node-name">02_Assignments</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 3.75rem;">
+                                        <i class="ph-light ph-file"></i>
+                                        <span class="node-name">Week1_FileOps_v1.0.pdf</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 3.75rem;">
+                                        <i class="ph-light ph-file"></i>
+                                        <span class="node-name">Week2_LitSearch_v2.1.pdf</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 2.5rem;">
+                                        <i class="ph-light ph-folder"></i>
+                                        <span class="node-name">03_ProjectPortfolio</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 3.75rem;">
+                                        <i class="ph-light ph-file"></i>
+                                        <span class="node-name">index.html</span>
+                                    </div>
+                                    <div class="tree-node" style="left: 1.25rem;">
+                                        <i class="ph-light ph-folder"></i>
+                                        <span class="node-name">INT2204_AdvancedProg</span>
+                                        <span class="node-desc">(Lập trình nâng cao Java)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Naming rules card -->
+                        <div class="card-shell">
+                            <div class="card-inner">
+                                <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem;"><i class="ph-light ph-hash-straight" style="color: var(--accent-blue);"></i> Quy tắc đặt tên tệp nhất quán</h3>
+                                <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.8rem; color: var(--text-secondary);">
+                                    <p>
+                                        <strong>1. Cấu trúc chuẩn hóa:</strong> Sử dụng cú pháp <code class="mono" style="background-color: var(--border-color); padding: 0.1rem 0.3rem; border-radius: 4px; color: var(--accent-blue);">[MãMôn]_[LoạiBài]_[Tuần/Ngày]_[PhiênBản]</code> để thuận tiện phân loại tự động.
+                                    </p>
+                                    <p>
+                                        <strong>2. Loại bỏ từ khóa mơ hồ:</strong> Nghiêm cấm đặt tên dạng "moi_nhat", "final", "code_chay_duoc". Thay thế bằng cách đánh số phiên bản thập phân tăng dần (<code class="mono">v1.0</code>, <code class="mono">v1.1</code>).
+                                    </p>
+                                    <p>
+                                        <strong>3. Thao tác an toàn:</strong> Sử dụng <code class="mono">Shift + Delete</code> để xóa vĩnh viễn tệp tạm, giải phóng bộ nhớ đĩa; và tận dụng tính năng khôi phục từ Recycle Bin khi thao tác nhầm.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEEK 2 -->
+                <section class="exercise-block reveal" id="week2">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-magnifying-glass"></i> Bài 2 · Nghiên cứu học thuật</span>
+                        <h2 class="section-title">Khai Thác Thông Tin & Đánh Giá Tài Liệu Khoa Học</h2>
+                        <p class="section-summary">
+                            Sử dụng các toán tử tìm kiếm nâng cao để tra cứu tài liệu học thuật về **Thuật toán tìm đường (Pathfinding) trong thiết kế Game**, thực hiện đánh giá độ tin cậy nghiêm ngặt của 10 nguồn tài liệu tham khảo.
+                        </p>
+                    </div>
+                    
+                    <div class="search-operator-grid">
+                        <div class="search-operator-card">
+                            <div class="operator-header">
+                                <span class="operator-name">"" (Ngoặc kép) & AND</span>
+                                <span class="operator-badge">Tìm kiếm chính xác</span>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Ép buộc công cụ tìm kiếm lọc chính xác cụm từ chuyên ngành và bối cảnh nghiên cứu.</p>
+                            <div class="operator-example">"pathfinding" AND "game level design"</div>
+                        </div>
+                        <div class="search-operator-card">
+                            <div class="operator-header">
+                                <span class="operator-name">site: & filetype:</span>
+                                <span class="operator-badge">Giới hạn định dạng</span>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Giới hạn tìm kiếm trên các kho lưu trữ học thuật số dưới dạng tài liệu PDF khoa học.</p>
+                            <div class="operator-example">site:arxiv.org OR site:diva-portal.org filetype:pdf</div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;"><i class="ph-light ph-table" style="color: var(--accent-orange);"></i> Bảng Đánh Giá Độ Tin Cậy Tài Liệu Học Thuật</h3>
+                    <div class="table-wrapper">
+                        <table class="matrix-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 25%;">Tên Tài Liệu & Tác Giả</th>
+                                    <th style="width: 15%;">Cơ Quan Lưu Trữ</th>
+                                    <th style="width: 15%;">Độ Tin Cậy</th>
+                                    <th style="width: 45%;">Nhận Xét & Giá Trị Học Thuật</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="table-doc-title">A Navigation Mesh-Based Pathfinding...</div>
+                                        <div class="table-doc-meta">(Björkman, M., 2021)</div>
+                                    </td>
+                                    <td><code class="mono">DiVA Portal</code></td>
+                                    <td><span class="reliability-badge reliability-high"><i class="ph-light ph-shield-check"></i> Rất cao</span></td>
+                                    <td>Giá trị thực tiễn lớn khi đối chiếu trực tiếp mã nguồn C++ giữa đồ thị Waypoint và NavMesh. Chứng minh hiệu quả thuật toán cắt đa giác (ear-clipping).</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-doc-title">Compromise-free Pathfinding on a Navigation Mesh</div>
+                                        <div class="table-doc-meta">(Cui, X. và cộng sự, 2017)</div>
+                                    </td>
+                                    <td><code class="mono">IJCAI</code></td>
+                                    <td><span class="reliability-badge reliability-absolute"><i class="ph-light ph-shield-check"></i> Tuyệt đối</span></td>
+                                    <td>Tài liệu từ hội nghị top đầu thế giới về AI. Chứng minh bằng giải tích và đại số tuyến tính tính tối ưu tuyệt đối của giải thuật Polyanya.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-doc-title">Applying pathfinding techniques on Android game...</div>
+                                        <div class="table-doc-meta">(Ferreira, R., 2013)</div>
+                                    </td>
+                                    <td><code class="mono">UFJF</code></td>
+                                    <td><span class="reliability-badge reliability-good"><i class="ph-light ph-shield-check"></i> Đáng tin</span></td>
+                                    <td>Phân tích giới hạn phần cứng di động. Tác giả đề xuất phương pháp tối giản hàm Heuristic để hạn chế rò rỉ bộ nhớ và duy trì FPS.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-doc-title">Jump Point Search Pathfinding in 4-connected Grids</div>
+                                        <div class="table-doc-meta">(Harabor, D. và Grastien, A., 2025)</div>
+                                    </td>
+                                    <td><code class="mono">arXiv</code></td>
+                                    <td><span class="reliability-badge reliability-absolute"><i class="ph-light ph-shield-check"></i> Tuyệt đối</span></td>
+                                    <td>Giải quyết triệt để bài toán tính đối xứng đường đi (Path Symmetries) của A*. Thuật toán JPS giúp tiết kiệm 70% bộ nhớ trong không gian bản đồ lưới rộng.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-doc-title">Comparison of Grid-based Pathfinding...</div>
+                                        <div class="table-doc-meta">(Lautanen, L., 2020)</div>
+                                    </td>
+                                    <td><code class="mono">LUTPub</code></td>
+                                    <td><span class="reliability-badge reliability-high"><i class="ph-light ph-shield-check"></i> Cao</span></td>
+                                    <td>Sử dụng phương pháp benchmark thực nghiệm để đo lường độ phức tạp thời gian dựa trên các kiểu cấu trúc bản đồ hình học và phân bố vật cản.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-doc-title">Pathfinding in Computer Games</div>
+                                        <div class="table-doc-meta">(Millingko, 2011)</div>
+                                    </td>
+                                    <td><code class="mono">TU Dublin Arrow</code></td>
+                                    <td><span class="reliability-badge reliability-good"><i class="ph-light ph-shield-check"></i> Đáng tin</span></td>
+                                    <td>Phân tích cách Game AI tận dụng cấu trúc dữ liệu tiền tính toán (precomputed data) và so sánh sự khác biệt bộ nhớ giữa duyệt đồ thị DFS và BFS.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- WEEK 3 -->
+                <section class="exercise-block reveal" id="week3">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-terminal"></i> Bài 3 · Prompt Engineering</span>
+                        <h2 class="section-title">Kỹ Thuật Thiết Kế Prompt Chuyên Sâu</h2>
+                        <p class="section-summary">
+                            Thực nghiệm so sánh sự biến thiên chất lượng đầu ra giữa prompt cơ bản, cải tiến, nâng cao trong các tác vụ phân tích thuật toán ALT và tối ưu hóa Heuristic.
+                        </p>
+                    </div>
+                    
+                    <div class="prompt-box">
+                        <!-- Left Selector -->
+                        <div class="prompt-step-wrapper">
+                            <button class="prompt-step-btn active" data-task="task1">
+                                <div class="prompt-step-num">01</div>
+                                <div>
+                                    <div class="prompt-step-title">Tóm tắt Bài báo Khoa học</div>
+                                    <div class="prompt-step-desc">Tác vụ bóc tách thuật toán ALT (Goldberg et al.)</div>
+                                </div>
+                            </button>
+                            <button class="prompt-step-btn" data-task="task2">
+                                <div class="prompt-step-num">02</div>
+                                <div>
+                                    <div class="prompt-step-title">Giải thích Khái niệm Phức tạp</div>
+                                    <div class="prompt-step-desc">Tối ưu hóa heuristic (Admissible & Consistent)</div>
+                                </div>
+                            </button>
+                            <button class="prompt-step-btn" data-task="task3">
+                                <div class="prompt-step-num">03</div>
+                                <div>
+                                    <div class="prompt-step-title">Thiết kế Bộ Câu hỏi Ôn tập</div>
+                                    <div class="prompt-step-desc">Tạo câu hỏi phân hóa theo thang đo nhận thức Bloom</div>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <!-- Right Display Shell -->
+                        <div class="prompt-display-shell">
+                            <div class="prompt-display-inner">
+                                <div class="prompt-level-tabs">
+                                    <button class="prompt-level-btn active lvl-basic" data-level="basic">CƠ BẢN</button>
+                                    <button class="prompt-level-btn lvl-improved" data-level="improved">CẢI TIẾN</button>
+                                    <button class="prompt-level-btn lvl-advanced" data-level="advanced">NÂNG CAO</button>
+                                </div>
+                                <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;"><i class="ph-light ph-terminal-window"></i> Nội dung Prompt:</h4>
+                                <div class="prompt-text-content" id="prompt-text">Loading...</div>
+                                <div class="prompt-output-header">
+                                    <i class="ph-light ph-cpu" style="color: var(--accent-orange);"></i> Đánh giá kết quả đầu ra:
+                                </div>
+                                <p class="prompt-output-content" id="prompt-output">Loading...</p>
+                                <div class="prompt-analysis" id="prompt-analysis">
+                                    <strong>Bản chất kỹ thuật:</strong> Loading...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEEK 4 -->
+                <section class="exercise-block reveal" id="week4">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-users-three"></i> Bài 4 · Cộng tác trực tuyến</span>
+                        <h2 class="section-title">Quy Trình Làm Việc Nhóm & Phối Hợp Số</h2>
+                        <p class="section-summary">
+                            Tổ chức công việc và theo dõi tiến độ biên soạn bộ tài liệu ôn tập môn **Lập trình nâng cao (Java OOP)** sử dụng hệ sinh thái cộng tác trực tuyến.
+                        </p>
+                    </div>
+                    
+                    <div class="bento-grid-3">
+                        <div class="card-shell">
+                            <div class="card-inner">
+                                <span class="eyebrow" style="margin-bottom: 0.5rem; color: var(--accent-orange); border-color: rgba(249, 115, 22, 0.2);">Thông tin dự án</span>
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8rem; color: var(--text-secondary);">
+                                    <div><strong>Đề tài:</strong> Ôn tập Java OOP</div>
+                                    <div><strong>MSSV:</strong> 25020220</div>
+                                    <div><strong>Công cụ:</strong> Trello, Meet, Drive, Docs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shell" style="grid-column: span 2;">
+                            <div class="card-inner">
+                                <span class="eyebrow" style="margin-bottom: 0.5rem; color: var(--accent-blue);">Quản lý tích hợp</span>
+                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5;">
+                                    Trello đóng vai trò điều phối tác vụ (Kanban); Google Meet phục vụ họp nhóm rà soát nội dung trực quan; Google Drive tổ chức phân quyền thư mục 4 cấp; Google Docs hỗ trợ soạn thảo trực tuyến.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kanban Board -->
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem;"><i class="ph-light ph-kanban" style="color: var(--accent-blue);"></i> Quản lý tiến trình (Mockup Trello Board - Click vào thẻ để xem chi tiết)</h3>
+                    <div class="trello-board">
+                        <div class="trello-column">
+                            <div class="trello-col-header"><span>CẦN LÀM</span><span class="trello-card-count">1</span></div>
+                            <div class="trello-cards-container">
+                                <div class="trello-card" data-card="t1">
+                                    <div class="trello-card-tags"><span class="trello-tag tag-med">Medium</span></div>
+                                    <div class="trello-card-title">Thiết kế cấu trúc chương trình mẫu JUnit Test</div>
+                                    <div class="trello-card-meta"><div class="trello-meta-left"><i class="ph-light ph-clock"></i> <span>Jun 10</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trello-column">
+                            <div class="trello-col-header"><span>ĐANG LÀM</span><span class="trello-card-count">1</span></div>
+                            <div class="trello-cards-container">
+                                <div class="trello-card" data-card="t2">
+                                    <div class="trello-card-tags"><span class="trello-tag tag-high">High</span></div>
+                                    <div class="trello-card-title">Viết nội dung phần 3: Generic & Collections</div>
+                                    <div class="trello-card-meta"><div class="trello-meta-left"><i class="ph-light ph-clock"></i> <span>Jun 08</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trello-column">
+                            <div class="trello-col-header"><span>KIỂM TRA</span><span class="trello-card-count">1</span></div>
+                            <div class="trello-cards-container">
+                                <div class="trello-card" data-card="t3">
+                                    <div class="trello-card-tags"><span class="trello-tag tag-high">High</span></div>
+                                    <div class="trello-card-title">Rà soát và chuẩn hóa định dạng mã nguồn Java</div>
+                                    <div class="trello-card-meta"><div class="trello-meta-left"><i class="ph-light ph-clock"></i> <span>Jun 07</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trello-column">
+                            <div class="trello-col-header"><span>ĐÃ XONG</span><span class="trello-card-count">2</span></div>
+                            <div class="trello-cards-container">
+                                <div class="trello-card" data-card="t4">
+                                    <div class="trello-card-tags"><span class="trello-tag tag-low">Low</span></div>
+                                    <div class="trello-card-title">Thiết lập thư mục Google Drive & Phân quyền</div>
+                                    <div class="trello-card-meta"><div class="trello-meta-left"><i class="ph-light ph-check-square"></i> <span>Done</span></div></div>
+                                </div>
+                                <div class="trello-card" data-card="t5">
+                                    <div class="trello-card-tags"><span class="trello-tag tag-high">High</span></div>
+                                    <div class="trello-card-title">Biên soạn phần 1: Lập trình hướng đối tượng nâng cao</div>
+                                    <div class="trello-card-meta"><div class="trello-meta-left"><i class="ph-light ph-check-square"></i> <span>Done</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEEK 5 -->
+                <section class="exercise-block reveal" id="week5">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-article"></i> Bài 5 · Sáng tạo nội dung số</span>
+                        <h2 class="section-title">Sản Phẩm Tech Blog & Phản Biện Thiết Kế OOP</h2>
+                        <p class="section-summary">
+                            Trưng bày bài viết công nghệ "Thiết kế Hệ thống Đấu giá bằng Java OOP: Phân tích kiến trúc Class Auction và Entity" được đồng sáng tạo bởi AI, nhấn mạnh luận điểm phản biện sửa đổi cấu trúc.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-post">
+                        <!-- Blog Banner -->
+                        <div class="card-shell" style="margin-bottom: 2rem; padding: 6px;">
+                            <div class="card-inner" style="padding: 0; overflow: hidden; border-radius: calc(var(--radius-inner) - 4px);">
+                                <img src="assets/images/blog_thumbnail.png" alt="Blog Java Auction Banner" style="width: 100%; height: auto; display: block;">
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">Thiết kế Hệ thống Đấu giá bằng Java OOP: Phân tích kiến trúc Class Auction và Entity</h3>
+                        <div class="blog-meta">
+                            <div class="blog-meta-item"><i class="ph-light ph-calendar"></i> <span>06 Tháng 6, 2026</span></div>
+                            <div class="blog-meta-item"><i class="ph-light ph-user-circle"></i> <span>Trần Quốc Khánh</span></div>
+                            <div class="blog-meta-item"><i class="ph-light ph-tag"></i> <span>Software Architecture</span></div>
+                        </div>
+                        
+                        <p class="blog-paragraph">
+                            Một trong những lỗi thiết kế kinh điển mà các mô hình ngôn ngữ lớn (LLMs) thường xuyên mắc phải là lạm dụng tính kế thừa (Inheritance) nhằm mục đích tái sử dụng mã nguồn một cách cơ học. Bài viết này phân tích kiến trúc lập trình hệ thống đấu giá, qua đó chứng minh tại sao quan hệ chứa đựng (Composition) lại tối ưu hơn kế thừa trong trường hợp này.
+                        </p>
+                        
+                        <!-- Dynamic Code Comparison -->
+                        <div class="code-compare-container">
+                            <div class="code-compare-tabs">
+                                <button class="code-compare-btn btn-bad active" data-compare="ai-bad">ĐỀ XUẤT CỦA AI (Kế thừa sai)</button>
+                                <button class="code-compare-btn btn-good" data-compare="student-good">THIẾT KẾ TỐI ƯU (Composition)</button>
+                            </div>
+                            
+                            <!-- Bad AI Panel -->
+                            <div class="code-panel code-bad active" id="code-ai-bad">
+<span class="code-comment">// AI đề xuất: Class Auction kế thừa trực tiếp Entity</span>
+<span class="code-keyword">public class</span> <span class="code-class">Auction</span> <span class="code-keyword">extends</span> <span class="code-class">Entity</span> {
+    <span class="code-keyword">private</span> <span class="code-class">String</span> title;
+    <span class="code-keyword">private</span> <span class="code-class">BigDecimal</span> currentBid;
+    
+    <span class="code-keyword">public</span> <span class="code-class">Auction</span>(<span class="code-class">String</span> id, <span class="code-class">LocalDateTime</span> createdAt, <span class="code-class">String</span> title) {
+        <span class="code-keyword">super</span>(id, createdAt); <span class="code-comment">// Ép buộc liên kết</span>
+        <span class="code-keyword">this</span>.title = title;
+    }
+}</div>
+
+                            <!-- Good Student Panel -->
+                            <div class="code-panel code-good" id="code-student-good">
+<span class="code-comment">// Thiết kế chuẩn: Tách biệt Entity lưu trữ khỏi nghiệp vụ</span>
+<span class="code-keyword">public class</span> <span class="code-class">Auction</span> {
+    <span class="code-keyword">private final</span> <span class="code-class">AuctionEntity</span> data; <span class="code-comment">// Composition (HAS-A relation)</span>
+    <span class="code-keyword">private final</span> <span class="code-class">List</span>&lt;<span class="code-class">Bid</span>&gt; bidHistory;
+    
+    <span class="code-keyword">public</span> <span class="code-class">Auction</span>(<span class="code-class">AuctionEntity</span> data) {
+        <span class="code-keyword">this</span>.data = data;
+        <span class="code-keyword">this</span>.bidHistory = <span class="code-keyword">new</span> <span class="code-class">ArrayList</span>&lt;&gt;();
+    }
+    
+    <span class="code-keyword">public void</span> placeBid(<span class="code-class">Bid</span> newBid) {
+        <span class="code-keyword">if</span> (data.isExpired()) <span class="code-keyword">throw new</span> <span class="code-class">IllegalStateException</span>(<span class="code-string">"Đã kết thúc!"</span>);
+        bidHistory.add(newBid);
+    }
+}</div>
+                            
+                            <!-- Compare notes -->
+                            <div class="code-analysis-note note-bad active" id="note-ai-bad">
+                                <i class="ph-light ph-warning"></i>
+                                <div>
+                                    <strong>Vấn đề thiết kế của AI:</strong> Kế thừa đại diện cho quan hệ "IS-A" (Là một). Một cuộc đấu giá không phải là một thực thể lưu trữ dữ liệu thô (Entity) đơn thuần; nó đại diện cho một quy trình nghiệp vụ (Domain Process). Việc ép kế thừa trực tiếp gây ra sự kết chặt và rò rỉ dữ liệu.
+                                </div>
+                            </div>
+                            <div class="code-analysis-note note-good" id="note-student-good" style="display: none;">
+                                <i class="ph-light ph-check-circle"></i>
+                                <div>
+                                    <strong>Phản biện và Sửa đổi cá nhân (>50%):</strong> Việc sử dụng <strong>Composition</strong> tách biệt hoàn toàn cơ chế lưu trữ dữ liệu (Data Persistence) ra khỏi quy trình kiểm soát nghiệp vụ (Domain Logic), giúp lớp nghiệp vụ cực kỳ linh hoạt, giảm thiểu kết chặt và dễ dàng thực hiện Unit Test.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-highlight-box">
+                            <h4>Bản dàn trang & Đường dẫn tài liệu</h4>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Đọc bản tech blog đầy đủ được trình bày trên nền tảng Canva Docs:</p>
+                            <a href="https://canva.link/q7x3khohpmnfsno" target="_blank" class="btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.7rem; background-color: var(--accent-blue); color: white;">
+                                <i class="ph-light ph-link"></i> Xem bản Canva
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEEK 6 -->
+                <section class="exercise-block reveal" id="week6">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-shield-check"></i> Bài 6 · Đạo đức công nghệ</span>
+                        <h2 class="section-title">An Toàn Học Thuật & Sử Dụng AI Có Trách Nhiệm</h2>
+                        <p class="section-summary">
+                            Phân tích ranh giới đạo đức của việc sử dụng AI trong nghiên cứu và lập trình khoa học máy tính tại VNU, đồng thời thiết lập bộ quy tắc ứng xử cá nhân.
+                        </p>
+                    </div>
+                    
+                    <div class="bento-grid-2x2">
+                        <div class="card-shell">
+                            <div class="card-inner">
+                                <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;"><i class="ph-light ph-bank" style="color: var(--accent-blue);"></i> Chính sách VNU & Rào cản kỹ thuật</h3>
+                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;">
+                                    VNU đã chủ động đưa AI trở thành học phần bắt buộc đối với sinh viên từ năm 2025. Đây là chính sách cởi mở, thúc đẩy năng suất. Tuy nhiên, thách thức đối với sinh viên CNTT là rất lớn. Việc phụ thuộc hoàn toàn vào AI để giải quyết các bài toán giải thuật cốt lõi sẽ tạo ra **"ảo tưởng năng lực"**, thui chột khả năng tư duy gỡ lỗi độc lập khi đi làm thực tế.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-shell">
+                            <div class="card-inner">
+                                <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;"><i class="ph-light ph-quotes"></i> Trích dẫn chuẩn APA</h3>
+                                <div style="background-color: var(--bg-secondary); padding: 1rem; border-radius: 10px; border: 1px solid var(--border-color); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5;">
+                                    <p class="mono" style="color: var(--text-primary); margin-bottom: 0.5rem;">Google. (2026). Gemini (Phiên bản Tháng 5) [Mô hình ngôn ngữ lớn]. https://gemini.google.com</p>
+                                    <p><em>Mục đích:</em> Hỗ trợ tạo khung lý thuyết so sánh cấu trúc dữ liệu đồ thị, thuật toán Dijkstra và A*. Mọi thông tin đã được kiểm chứng chéo và biên tập lại hoàn toàn bởi người viết.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 5 Principles Infographic -->
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem;"><i class="ph-light ph-info" style="color: var(--accent-orange);"></i> Bộ 5 Nguyên Tắc Sử Dụng AI Có Trách Nhiệm (Click để xem chi tiết)</h3>
+                    <div class="principles-grid">
+                        <div class="principle-card" data-principle="p1">
+                            <span class="principle-num">01</span>
+                            <div class="principle-title">Hiểu trước khi dùng</div>
+                            <div class="principle-desc">Tuyệt đối không sử dụng code AI nếu không tự giải thích được luồng hoạt động của nó.</div>
+                        </div>
+                        <div class="principle-card" data-principle="p2">
+                            <span class="principle-num">02</span>
+                            <div class="principle-title">Kiểm chứng chéo</div>
+                            <div class="principle-desc">Không sao chép trực tiếp. Phải tự viết test cases để kiểm tra mọi trường hợp biên.</div>
+                        </div>
+                        <div class="principle-card" data-principle="p3">
+                            <span class="principle-num">03</span>
+                            <div class="principle-title">Minh bạch mã nguồn</div>
+                            <div class="principle-desc">Sử dụng comments để ghi nhận trung thực vị trí mã nguồn được hỗ trợ bởi AI.</div>
+                        </div>
+                        <div class="principle-card" data-principle="p4">
+                            <span class="principle-num">04</span>
+                            <div class="principle-title">Tuân thủ giấy phép</div>
+                            <div class="principle-desc">Đối chiếu code AI gợi ý, tránh vi phạm bản quyền nguồn mở GPL/MIT.</div>
+                        </div>
+                        <div class="principle-card" data-principle="p5">
+                            <span class="principle-num">05</span>
+                            <div class="principle-title">Bảo mật hệ thống</div>
+                            <div class="principle-desc">Tuyệt đối không tải lên API Keys hay dữ liệu nhạy cảm của dự án lên khung chat AI.</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Principle Details Drawer -->
+                    <div id="principle-detail-panel" style="display:none; margin-top: 1rem; padding: 1.25rem; background-color: var(--bg-secondary); border-radius: var(--radius-inner); border: 1px solid var(--border-color);">
+                        <h4 id="principle-detail-title" style="font-weight: 700; color: var(--accent-blue); margin-bottom: 0.4rem; font-size: 0.9rem;"></h4>
+                        <p id="principle-detail-text" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5;"></p>
+                    </div>
+                </section>
+
+                <!-- DOWNLOAD CENTER -->
+                <section class="exercise-block reveal" id="downloads">
+                    <div class="section-header">
+                        <span class="eyebrow"><i class="ph-light ph-download-simple"></i> Download Center · Tải xuống tài liệu</span>
+                        <h2 class="section-title">Trung Tâm Tải Xuống Báo Cáo Thành Phần</h2>
+                        <p class="section-summary">
+                            Tải xuống trực tiếp các file báo cáo thành phần dưới dạng tệp PDF gốc để phục vụ công tác lưu trữ hồ sơ và đánh giá dự án cá nhân.
+                        </p>
+                    </div>
+                    
+                    <div class="download-center">
+                        <!-- Tuan 1 -->
+                        <div class="download-card">
+                            <div class="download-title">Tuần 1: Quản lý tệp tin & thư mục</div>
+                            <div class="download-size">Định dạng: PDF · 741 KB</div>
+                            <a href="assets/docs/Tuan1.pdf" download class="btn-primary" style="margin-top: auto; width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.45rem 1rem;">
+                                <i class="ph-light ph-download-simple"></i> Tải xuống PDF
+                            </a>
+                        </div>
+                        <!-- Tuan 2 -->
+                        <div class="download-card">
+                            <div class="download-title">Tuần 2: Tìm kiếm & đánh giá thông tin</div>
+                            <div class="download-size">Định dạng: PDF · 497 KB</div>
+                            <a href="assets/docs/Tuan2.pdf" download class="btn-primary" style="margin-top: auto; width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.45rem 1rem;">
+                                <i class="ph-light ph-download-simple"></i> Tải xuống PDF
+                            </a>
+                        </div>
+                        <!-- Tuan 3 -->
+                        <div class="download-card">
+                            <div class="download-title">Tuần 3: Prompt Engineering</div>
+                            <div class="download-size">Định dạng: PDF · 4.8 MB</div>
+                            <a href="assets/docs/Tuan3.pdf" download class="btn-primary" style="margin-top: auto; width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.45rem 1rem;">
+                                <i class="ph-light ph-download-simple"></i> Tải xuống PDF
+                            </a>
+                        </div>
+                        <!-- Tuan 4 -->
+                        <div class="download-card">
+                            <div class="download-title">Tuần 4: Cộng tác trong môi trường số</div>
+                            <div class="download-size">Định dạng: PDF · 1.2 MB</div>
+                            <a href="assets/docs/Tuan4.pdf" download class="btn-primary" style="margin-top: auto; width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.45rem 1rem;">
+                                <i class="ph-light ph-download-simple"></i> Tải xuống PDF
+                            </a>
+                        </div>
+                        <!-- Tuan 5 -->
+                        <div class="download-card">
+                            <div class="download-title">Tuần 5: Sáng tạo nội dung với AI</div>
+                            <div class="download-size">Định dạng: PDF · 1.2 MB</div>
+                            <a href="assets/docs/Tuan5.pdf" download class="btn-primary" style="margin-top: auto; width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.45rem 1rem;">
+                                <i class="ph-light ph-download-simple"></i> Tải xuống PDF
+                            </a>
+                        </div>
+                        <!-- Tuan 6 -->
+                        <div class="download-card">
+                            <div class="download-title">Tuần 6: Sử dụng AI có trách nhiệm</div>
+                            <div class="download-size">Định dạng: PDF · 806 KB</div>
+                            <a href="assets/docs/Tuan6.pdf" download class="btn-primary" style="margin-top: auto; width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.45rem 1rem;">
+                                <i class="ph-light ph-download-simple"></i> Tải xuống PDF
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            
+        </div>
+
+    </main>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">
+            <i class="ph-light ph-user-focus"></i>
+            <span>Giới thiệu</span>
+        </a>
+        <a href="exercises.html" class="mobile-nav-link active">
+            <i class="ph-light ph-books"></i>
+            <span>Bài tập</span>
+        </a>
+        <a href="summary.html" class="mobile-nav-link">
+            <i class="ph-light ph-notebook"></i>
+            <span>Tổng kết</span>
+        </a>
+    </nav>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p style="font-weight: 700; color: var(--text-primary);">Trần Quốc Khánh © 2026</p>
+                <p>Digital Portfolio · Học phần Nhập môn Công nghệ số (VNU1001)</p>
+                <p>Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội (VNU-UET)</p>
+            </div>
+            <div class="footer-right">
+                <a href="index.html" class="footer-link">Giới thiệu</a>
+                <a href="exercises.html" class="footer-link">Bài tập</a>
+                <a href="summary.html" class="footer-link">Tổng kết</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

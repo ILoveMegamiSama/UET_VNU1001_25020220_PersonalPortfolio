@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang Tổng kết và Đánh giá bản thân của sinh viên Trần Quốc Khánh (25020220) tại VNU-UET.">
+    <title>Tổng kết | Trần Quốc Khánh | Digital Portfolio VNU-UET</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       FLOATING GLASS NAVIGATION BAR
+       ========================================================================== -->
+    <header>
+        <nav class="header-nav" id="main-nav">
+            <div class="logo-section">
+                <img src="assets/images/avatar.jpg" alt="Trần Quốc Khánh" class="logo-avatar">
+                <div>
+                    <div class="logo-text">Trần Quốc Khánh</div>
+                    <div class="logo-sub">MSSV: 25020220</div>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" id="nav-home">Giới thiệu</a>
+                <a href="exercises.html" class="nav-link" id="nav-exercises">Bài tập</a>
+                <a href="summary.html" class="nav-link active" id="nav-summary">Tổng kết</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="btn-icon" id="theme-toggle" title="Thay đổi giao diện" aria-label="Thay đổi giao diện">
+                    <i class="ph-light ph-sun-dim" id="theme-icon"></i>
+                </button>
+                <button class="btn-export" id="export-pdf-btn">
+                    <i class="ph-light ph-printer"></i> In trang
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+       MAIN CONTENT (Summary)
+       ========================================================================== -->
+    <main class="container">
+        
+        <section class="reveal" id="reflection">
+            <div class="section-header">
+                <span class="eyebrow"><i class="ph-light ph-notebook"></i> Trang tổng kết · Reflections</span>
+                <h1 class="section-title text-gradient-orange" style="font-size: 2.6rem; font-weight: 850; letter-spacing: -0.03em; display: block;">Nhìn Lại Hành Trình & Định Hướng Tương Lai</h1>
+                <p class="section-summary">
+                    Chia sẻ những trải nghiệm thực tế, rào cản kỹ thuật đã vượt qua và sự trưởng thành về mặt tư duy kỹ năng số sau học phần.
+                </p>
+            </div>
+            
+            <div class="card-shell" style="margin-bottom: 3rem;">
+                <div class="card-inner">
+                    <div class="reflection-essay">
+                        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">
+                            Việc xây dựng Digital Portfolio này là một cơ hội tuyệt vời để tôi tự kiểm chứng lại khối lượng kiến thức đã tiếp thu. Trải qua 6 tuần học tập và thực hành, điều quan trọng nhất tôi nhận được không chỉ là việc sử dụng thành thạo các công cụ số như Git, Trello, hay AI Prompts, mà chính là sự thay đổi trong **Tư duy tiếp cận vấn đề (First Principles Thinking)**.
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">
+                            Thách thức lớn nhất tôi gặp phải là làm thế nào để tích hợp AI vào quy trình làm việc mà không đánh mất đi bản sắc và năng lực tư duy độc lập của mình. Trường hợp phản biện thiết kế cấu trúc Java OOP ở Bài tập 5 là một bài học đắt giá: Nếu nhắm mắt làm theo đề xuất của mô hình AI, sản phẩm làm ra có thể chạy được nhưng sẽ để lại một khoản nợ kỹ thuật (Technical Debt) khổng lồ cho tương lai.
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">
+                            Trong tương lai, với tư cách là một sinh viên Khoa học Máy tính tại VNU-UET, tôi cam kết sẽ luôn tuân thủ bộ nguyên tắc sử dụng AI có trách nhiệm, không ngừng học hỏi và trau dồi các kiến thức nền tảng về toán học và giải thuật để làm bệ phóng vững chắc làm chủ các công nghệ mới trong kỷ nguyên số.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;"><i class="ph-light ph-award" style="color: var(--accent-orange);"></i> Năng Lực Cốt Lõi Đạt Được</h3>
+            <div class="competency-list">
+                <div class="competency-item">
+                    <div class="competency-icon"><i class="ph-light ph-cpu"></i></div>
+                    <div class="competency-title">Tư duy Giải thuật & Phản Biện</div>
+                    <div class="competency-desc">Nắm vững bản chất giải thuật tìm đường (A*, Dijkstra) và rèn luyện kỹ năng phản biện thiết kế phần mềm, lựa chọn Composition thay vì kế thừa bừa bãi.</div>
+                </div>
+                
+                <div class="competency-item">
+                    <div class="competency-icon"><i class="ph-light ph-code"></i></div>
+                    <div class="competency-title">Prompt Engineering Chuyên Sâu</div>
+                    <div class="competency-desc">Thiết kế các prompts chất lượng cao áp dụng các kỹ thuật CoT, Role, định dạng chặt chẽ để chỉ dẫn AI giải quyết các tác vụ học thuật phức tạp chuẩn xác.</div>
+                </div>
+                
+                <div class="competency-item">
+                    <div class="competency-icon"><i class="ph-light ph-users"></i></div>
+                    <div class="competency-title">Quản Lý & Phối Hợp Trực Tuyến</div>
+                    <div class="competency-desc">Sử dụng thành thạo Trello, Meet, Docs, Drive để thiết lập quy trình chạy dự án nhóm khoa học, phân chia công việc tối ưu và đúng hạn.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">
+            <i class="ph-light ph-user-focus"></i>
+            <span>Giới thiệu</span>
+        </a>
+        <a href="exercises.html" class="mobile-nav-link">
+            <i class="ph-light ph-books"></i>
+            <span>Bài tập</span>
+        </a>
+        <a href="summary.html" class="mobile-nav-link active">
+            <i class="ph-light ph-notebook"></i>
+            <span>Tổng kết</span>
+        </a>
+    </nav>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p style="font-weight: 700; color: var(--text-primary);">Trần Quốc Khánh © 2026</p>
+                <p>Digital Portfolio · Học phần Nhập môn Công nghệ số (VNU1001)</p>
+                <p>Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội (VNU-UET)</p>
+            </div>
+            <div class="footer-right">
+                <a href="index.html" class="footer-link">Giới thiệu</a>
+                <a href="exercises.html" class="footer-link">Bài tập</a>
+                <a href="summary.html" class="footer-link">Tổng kết</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
