@@ -458,6 +458,113 @@
             window.print();
         });
     });
+
+    // ==========================================================================
+    // 9. DYNAMIC PRINT-ONLY REPORT GENERATION (WEEK 3 & WEEK 6)
+    // ==========================================================================
+    function generatePrintSections() {
+        const week3Section = document.getElementById("week3");
+        if (!week3Section) return;
+        
+        const printContainer = document.createElement("div");
+        printContainer.className = "prompt-print-container";
+        
+        const tasksMeta = {
+            task1: { title: "Tác vụ 1: Tóm tắt Bài báo Khoa học", desc: "Tác vụ bóc tách thuật toán ALT (Goldberg et al.)" },
+            task2: { title: "Tác vụ 2: Giải thích Khái niệm Phức tạp", desc: "Tối ưu hóa heuristic (Admissible & Consistent)" },
+            task3: { title: "Tác vụ 3: Thiết kế Bộ Câu hỏi Ôn tập", desc: "Tạo câu hỏi phân hóa theo thang đo nhận thức Bloom" }
+        };
+        
+        for (const taskKey in promptData) {
+            const task = promptData[taskKey];
+            const meta = tasksMeta[taskKey] || { title: taskKey, desc: "" };
+            
+            const taskDiv = document.createElement("div");
+            taskDiv.className = "prompt-print-block";
+            taskDiv.style.marginBottom = "2rem";
+            taskDiv.style.pageBreakInside = "avoid";
+            
+            taskDiv.innerHTML = `
+                <h3 style="font-size: 1.15rem; font-weight: 800; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.4rem; margin-top: 1.5rem; color: var(--text-primary);">${meta.title}</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">${meta.desc}</p>
+            `;
+            
+            for (const level of ["basic", "improved", "advanced"]) {
+                const levelData = task[level];
+                if (!levelData) continue;
+                
+                const levelTitle = level === "basic" ? "Cơ bản" : level === "improved" ? "Cải tiến" : "Nâng cao";
+                const badgeClass = `badge-${level}`;
+                
+                const levelDiv = document.createElement("div");
+                levelDiv.className = "prompt-level-section";
+                levelDiv.style.marginTop = "1rem";
+                levelDiv.style.padding = "1rem";
+                levelDiv.style.backgroundColor = "var(--bg-secondary)";
+                levelDiv.style.border = "1px solid var(--border-color)";
+                levelDiv.style.borderRadius = "10px";
+                levelDiv.style.pageBreakInside = "avoid";
+                
+                levelDiv.innerHTML = `
+                    <span class="prompt-level-badge ${badgeClass}" style="display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 9999px; text-transform: uppercase; margin-bottom: 0.5rem;">${levelTitle}</span>
+                    <p style="font-size: 0.8rem; margin-bottom: 0.3rem; color: var(--text-primary);"><strong>Prompt:</strong></p>
+                    <div class="prompt-text-content" style="margin-bottom: 0.8rem; padding: 0.6rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; font-size: 0.76rem; white-space: pre-wrap; color: var(--text-primary);">${levelData.prompt}</div>
+                    
+                    <p style="font-size: 0.8rem; margin-bottom: 0.3rem; color: var(--text-primary);"><strong>Kết quả đầu ra:</strong></p>
+                    <div style="margin-bottom: 0.8rem; padding: 0.6rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; font-size: 0.76rem; line-height: 1.5; white-space: pre-wrap; color: var(--text-primary);">${levelData.output}</div>
+                    
+                    <div class="prompt-analysis" style="border-top: 1px solid var(--border-color); padding-top: 0.4rem; font-size: 0.74rem; color: var(--text-secondary);">
+                        <strong>Bản chất kỹ thuật:</strong> ${levelData.analysis}
+                    </div>
+                `;
+                taskDiv.appendChild(levelDiv);
+            }
+            printContainer.appendChild(taskDiv);
+        }
+        week3Section.appendChild(printContainer);
+    }
+    
+    function generateWeek6PrintSection() {
+        const week6Section = document.getElementById("week6");
+        if (!week6Section) return;
+        
+        const printContainer = document.createElement("div");
+        printContainer.className = "principles-print-container";
+        printContainer.style.marginTop = "1.5rem";
+        
+        printContainer.innerHTML = `
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);"><i class="ph-light ph-info" style="color: var(--accent-orange);"></i> Chi tiết Bộ 5 Nguyên Tắc Sử Dụng AI Có Trách Nhiệm</h3>
+        `;
+        
+        for (const pId of ["p1", "p2", "p3", "p4", "p5"]) {
+            const principle = principleDetails[pId];
+            if (!principle) continue;
+            const num = pId.replace("p", "0");
+            
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "principle-print-item";
+            itemDiv.style.marginBottom = "1.2rem";
+            itemDiv.style.padding = "0.75rem 1rem";
+            itemDiv.style.backgroundColor = "var(--bg-secondary)";
+            itemDiv.style.border = "1px solid var(--border-color)";
+            itemDiv.style.borderRadius = "8px";
+            itemDiv.style.pageBreakInside = "avoid";
+            
+            itemDiv.innerHTML = `
+                <h4 style="font-size: 0.85rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.3rem; margin-top: 0;">
+                    ${num}. ${principle.title}
+                </h4>
+                <p style="font-size: 0.76rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+                    ${principle.desc}
+                </p>
+            `;
+            printContainer.appendChild(itemDiv);
+        }
+        week6Section.appendChild(printContainer);
+    }
+
+    generatePrintSections();
+    generateWeek6PrintSection();
 }
 
     if (document.readyState === "loading") {

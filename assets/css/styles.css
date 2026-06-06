@@ -1183,6 +1183,12 @@ footer {
     transform: translateY(0);
 }
 
+/* Print-only helper classes to avoid duplicate content in HTML while allowing complete PDF prints */
+.prompt-print-container,
+.principles-print-container {
+    display: none;
+}
+
 /* ==========================================================================
    14. PRINT STYLES (PDF EXPORT OVERRIDES)
    ========================================================================== */
@@ -1282,6 +1288,15 @@ footer {
     table.matrix-table tr { page-break-inside: avoid !important; }
     
     /* Prompt sections print override: show all three levels sequentially */
+    .prompt-box { display: none !important; }
+    .prompt-print-container { display: block !important; }
+    
+    .principles-grid { display: none !important; }
+    #principle-detail-panel { display: none !important; }
+    .principles-print-container { display: block !important; }
+    
+    .code-analysis-note { display: flex !important; }
+    
     .prompt-step-wrapper { display: none !important; }
     .prompt-display-shell { border: none !important; padding: 0 !important; }
     .prompt-display-inner { background: transparent !important; padding: 0 !important; }
